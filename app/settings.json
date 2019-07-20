@@ -1,0 +1,9 @@
+{
+    "appname" : "Code-Radio",
+    "appport" : "43210",
+    "mode" : "window",
+    "window" : {
+        "width" : "600",
+        "height" : "250"
+    }
+}

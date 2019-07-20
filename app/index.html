@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>NeutralinoJs</title>
+  <link rel="stylesheet" href="/assets/app.css">
+</head>
+
+<body>
+  <div id="container">
+    <h2>FreeCodeCamp Radio</h2>
+    <audio id="audio-player" controls>
+      <source src="">
+    </audio>
+    <h3 id="song-title-artist"></h3>
+    <select onchange="getBitrate()" id="bitrate-select">
+      <option value="normal-128">128kbps MP3</option>
+      <option value="normal-64">64kbps MP3</option>
+      <option value="remote-128">128kbps MP3 (Relay-2)</option>
+      <option value="remote-64">64kbps MP3 (Relay-1)</option>
+    </select>
+    <h5 id="active-listeners"></h5>
+
+  </div>
+  <script src="https://cdn.polyfill.io/v2/polyfill.js?features=fetch"></script>
+  <script src="/assets/neutralino.js"></script>
+  <script src="/assets/app.js"></script>
+
+</body>
+
+</html>
