@@ -24,9 +24,12 @@ The app is consuming about 15-20Mb of RAM on both my Windows and Linux machines.
 ## Usage
 Download the zip or tar.gz from the [releases page](https://github.com/boxdox/freecodecamp-coderadioapp/releases)
 
-Execute like a normal app on Windows and Linux.
+- Execute like a normal app on Windows.
 
-_Linux Only (from terminal): Change to the directory, then `./coderadio`_
+- Linux Only (from terminal):
+  -  Change to the directory
+  -  `chmod +x coderadio`
+  -  `./coderadio`
 
 ### License
 (MIT 2019 Boxdox)[https://boxdox.mit-license.org]
