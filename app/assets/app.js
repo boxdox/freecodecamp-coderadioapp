@@ -4,7 +4,7 @@ let bitrateSelect=document.querySelector('#bitrate-select').value
 let listeners=document.querySelector('#active-listeners')
 let streamURL=''
 
-const api_url="https://coderadio-admin.freecodecamp.org/api/nowplaying"
+const api_url="https://coderadio-admin.freecodecamp.org/api/nowplaying_static/coderadio.json"
 
 function getBitrate() {
     bitrateSelect = document.querySelector('#bitrate-select').value
@@ -18,8 +18,8 @@ function getData() {
 }
 
 function putData(data) {
-    artistTitle.innerHTML=data[0].now_playing.song.text
-    listeners.innerHTML=data[0].listeners.current + " Listening Right Now!"
+    artistTitle.innerHTML=data.now_playing.song.text
+    listeners.innerHTML=data.listeners.current + " Listening Right Now!"
     switchStream(data)
     if (player.getAttribute('src')!=streamURL){
         changeAudio(streamURL)
@@ -29,13 +29,13 @@ function putData(data) {
 function switchStream(data) {
     switch (bitrateSelect) {
         case "normal-64":
-            streamURL=data[0].station.mounts[1].url
+            streamURL=data.station.mounts[1].url
         case "normal-128":
-            streamURL=data[0].station.mounts[0].url
+            streamURL=data.station.mounts[0].url
         case "remote-64":
-            streamURL=data[0].station.remotes[1].url
+            streamURL=data.station.remotes[1].url
         case "remote-128":
-            streamURL=data[0].station.remotes[0].url
+            streamURL=data.station.remotes[0].url
     }
 }
 
